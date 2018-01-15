@@ -1,0 +1,13 @@
+<h3 class="page-heading">Innius Dashboard Configuration</h3>
+
+<div class="gf-form-group">    
+    <div ng-if="ctrl.appModel.jsonData.apiKeySet && ctrl.validKey" class="wp-enabled-box">
+        <i class="icon-gf icon-gf-check wp-icon-success"></i> Innius is enabled.
+    </div>
+    <div ng-if="ctrl.errorMsg">
+        <div class="alert alert-error">
+            <div class="alert-title ng-binding">Error</div>
+            <div>{{ctrl.errorMsg}}</div>
+        </div>
+    </div>
+</div>

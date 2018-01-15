@@ -1,0 +1,29 @@
+{
+  "name": "Innius",
+  "id": "innius-datasource",
+  "type": "datasource",
+
+  "metrics": true,
+
+  "info": {
+    "description": "grafana datasource for innius",
+    "author": {
+      "name": "innius",
+      "url": "http://innius.com"
+    },
+    "logos": {
+      "small": "img/innius_logo.png",
+      "large": "img/innius_logo.png"
+    },
+    "links": [
+      {"name": "Bitbucket", "url": "https://bitbucket.org/to-increase/dashboard-service"}      
+    ],
+    "version": "0.0.1",
+    "updated": "2017-04-19"
+  },
+
+  "dependencies": {
+    "grafanaVersion": "3.x.x",
+    "plugins": [ ]
+  }
+}

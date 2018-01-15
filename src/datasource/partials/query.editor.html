@@ -1,0 +1,61 @@
+<query-editor-row query-ctrl="ctrl" can-collapse="true">  
+    <div class="gf-form">
+        <span class="gf-form-label width-12">
+          Type
+        </span>
+        <div class="gf-form-select-wrapper max-width-12">
+          <select class="gf-form-input" ng-model="ctrl.target.type" ng-options="f as f for f in ['sensor', 'kpi']"></select>               
+        </div>
+    </div>
+    <div class="gf-form">
+				<span class="gf-form-label width-12">
+				  Company
+        </span>
+        <div class="gf-form-select-wrapper max-width-12">
+        <metric-segment segment="ctrl.companySegment" get-options="ctrl.searchCompanies()" on-change="ctrl.companyChanged()"></metric-segment>      
+        </div>
+			</div>
+      <div class="gf-form">
+          <span class="gf-form-label width-12">
+            Machine
+          </span>
+          <div class="gf-form-select-wrapper max-width-12">
+          <metric-segment segment="ctrl.machineSegment" get-options="ctrl.searchMachines(measurementFilter)" on-change="ctrl.machineChanged()"></metric-segment>
+          </div>
+      </div>
+
+      <div class="gf-form" ng-show="ctrl.target.type==='sensor'"> 
+          <span class="gf-form-label width-12">
+            Sensor
+          </span>
+          <div class="gf-form-select-wrapper max-width-12">
+          <metric-segment  segment="ctrl.sensorSegment" get-options="ctrl.searchSensors(measurementFilter)" on-change="ctrl.sensorChanged()"></metric-segment>
+        </div>
+      </div>
+      <div class="gf-form" ng-show="ctrl.target.type==='kpi'">
+          <span class="gf-form-label width-12">
+            KPI
+          </span>
+          <metric-segment segment="ctrl.kpiSegment" get-options="ctrl.searchKpis(measurementFilter)"
+          on-change="ctrl.kpiChanged()"></metric-segment>
+      </div>      
+      <div class="gf-form" ng-show="ctrl.target.type==='kpi'">
+          <span class="gf-form-label width-12">
+            Result 
+          </span>
+          <div class="gf-form-select-wrapper max-width-12">              
+              <select   class="gf-form-input" ng-model="ctrl.target.valueType" ng-options="f as f for f in ['timeserie', 'value']"></select>
+          </div>
+      </div>       
+
+    		<!--Alias-->
+			<div class="gf-form">
+				<span class="gf-form-label width-12">
+          Alias          
+        </span>
+        
+				<input type="text" name="alias" ng-model="ctrl.target.alias" class="gf-form-input max-width-12" ng-change="ctrl.onRender()" required />
+			</div>
+  <!-- </div>
+  </div> -->
+</query-editor-row>

@@ -1,0 +1,53 @@
+{
+  "name": "innius",
+  "id": "innius-grafana-plugin",
+  "type": "app",  
+  "css": {
+    "dark": "css/dark.css",
+    "light": "css/light.css"
+  },
+  "info": {
+    "description": "grafana dashboard plugin for innius",
+    "author": {
+      "name": "innius",
+      "url": "http://innius.com"
+    },
+    "logos": {
+      "small": "img/innius_logo.png",
+      "large": "img/innius_logo.png"
+    },
+    "links": [
+      {
+        "name": "github",
+        "url": "https://github.com/innius/grafana-plugin"
+      }
+    ],
+    "version": "0.0.1",
+    "updated": "2017-04-19"
+  },
+  "dependencies": {
+    "grafanaVersion": "3.x.x",
+    "plugins": []
+  },
+  "includes": [
+    {
+      "type": "datasource",
+      "name": "innius"
+    }
+  ],
+  "routes": [
+    {
+      "path": "/api/*",
+      "method": "POST,GET",
+      "url": "http://localhost:8080/",
+      "reqSignedIn": true,
+      "reqRole": "Viewer",
+      "headers": [
+        {
+          "name": "Authorization",
+          "content": "Bearer {{.SecureJsonData.apiKey}}"
+        }
+      ]
+    }
+  ]
+}

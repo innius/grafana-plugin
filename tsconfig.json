@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "sourceMap": false,
+        "declaration": false,        
+        "noImplicitAny": false,
+        "target": "es5",        
+        "module": "system",
+        "noEmitOnError": false
+    }
+}
