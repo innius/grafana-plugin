@@ -39,7 +39,7 @@
     {
       "path": "/api/*",
       "method": "POST,GET",
-      "url": "http://localhost:8080/",
+      "url": "http://dashboard-service:8080/",
       "reqSignedIn": true,
       "reqRole": "Viewer",
       "headers": [
