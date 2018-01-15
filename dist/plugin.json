@@ -1,13 +1,13 @@
 {
   "name": "innius",
-  "id": "innius-dashboard-app",
+  "id": "innius-grafana-plugin",
   "type": "app",  
   "css": {
     "dark": "css/dark.css",
     "light": "css/light.css"
   },
   "info": {
-    "description": "grafana dashboard for innius",
+    "description": "grafana dashboard plugin for innius",
     "author": {
       "name": "innius",
       "url": "http://innius.com"
@@ -18,8 +18,8 @@
     },
     "links": [
       {
-        "name": "Bitbucket",
-        "url": "https://bitbucket.org/to-increase/dashboard-service"
+        "name": "github",
+        "url": "https://github.com/innius/grafana-plugin"
       }
     ],
     "version": "0.0.1",
@@ -39,7 +39,7 @@
     {
       "path": "/api/*",
       "method": "POST,GET",
-      "url": "http://localhost:8080/",
+      "url": "http://dashboard-service:8080/",
       "reqSignedIn": true,
       "reqRole": "Viewer",
       "headers": [
