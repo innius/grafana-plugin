@@ -39,7 +39,7 @@ export class InniusDatasource {
     }
 
     private url(path: string): string {
-        return "api/plugin-proxy/innius-grafana-plugin/api" + path
+        return "api/plugin-proxy/innius-dashboard-app/api" + path
     }
 
     inniusDatasourceRequest(options: angular.IRequestConfig ) : angular.IHttpPromise<any> {

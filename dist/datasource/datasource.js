@@ -40,7 +40,7 @@ System.register([], function (exports_1, context_1) {
                     this.templateSrv = templateSrv;
                 }
                 InniusDatasource.prototype.url = function (path) {
-                    return "api/plugin-proxy/innius-grafana-plugin/api" + path;
+                    return "api/plugin-proxy/innius-dashboard-app/api" + path;
                 };
                 InniusDatasource.prototype.inniusDatasourceRequest = function (options) {
                     return this.backendSrv.datasourceRequest(options);

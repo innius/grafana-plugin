@@ -1,0 +1,19 @@
+version: '3.1'
+
+services:
+  mountebank:     
+    image: gesellix/mountebank
+    ports: 
+    - "2525:2525"
+    - "5555:5555"
+    volumes: 
+    - ./mountebank:/imposters
+    command: start --configfile ./imposters/imposter.json --loglevel debug --debug      
+
+  grafana:
+    image: ronvdw
+    restart: always
+    ports: 
+      - 3000:3000
+    links:
+      - mountebank  

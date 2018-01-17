@@ -1,6 +1,6 @@
 {
   "name": "innius",
-  "id": "innius-grafana-plugin",
+  "id": "innius-dashboard-app",
   "type": "app",  
   "css": {
     "dark": "css/dark.css",

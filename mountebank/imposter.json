@@ -1,0 +1,23 @@
+{
+    "port": 5555,
+    "protocol": "http",
+    "name": "origin",
+    "stubs": [
+      {
+        "predicates": [
+          {
+            "equals": {
+              "path": "/dbconnections/signup"
+            }
+          }
+        ],
+        "responses": [
+          {
+            "is": {
+              "statusCode": 200            
+            }
+          }
+        ]
+      }
+    ]
+}
