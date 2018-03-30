@@ -1,19 +1,34 @@
-version: '3.1'
+version: '3.2'
 
 services:
   mountebank:     
-    image: gesellix/mountebank
-    ports: 
-    - "2525:2525"
-    - "5555:5555"
-    volumes: 
-    - ./mountebank:/imposters
-    command: start --configfile ./imposters/imposter.json --loglevel debug --debug      
+   image: gesellix/mountebank
+   ports: 
+    - 8080
+    - 2525:2525
+    
+   volumes: 
+     - ./mountebank:/imposters
+
+   command: start --configfile ./imposters/imposter.json --loglevel debug --debug true
+   networks:
+    my-net:
+      aliases: 
+        - dashboard-service
 
   grafana:
-    image: ronvdw
+    image: grafana/grafana:5.0.3
     restart: always
     ports: 
       - 3000:3000
-    links:
-      - mountebank  
+    volumes: 
+      - ./dist:/var/lib/grafana/plugins/innius-grafana-plugin
+    environment: 
+      - GF_APP_MODE=development
+      - GF_SERVCER_ROUTER_LOGGING=true
+    networks:
+     - my-net
+
+networks:
+  my-net:
+    driver: bridge
