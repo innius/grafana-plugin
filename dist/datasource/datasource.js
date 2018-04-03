@@ -16,23 +16,23 @@ System.register([], function (exports_1, context_1) {
     return {
         setters: [],
         execute: function () {
-            Machine = (function () {
+            Machine = /** @class */ (function () {
                 function Machine() {
                 }
                 return Machine;
             }());
-            Sensor = (function () {
+            Sensor = /** @class */ (function () {
                 function Sensor() {
                 }
                 return Sensor;
             }());
-            QueryResult = (function () {
+            QueryResult = /** @class */ (function () {
                 function QueryResult() {
                 }
                 return QueryResult;
             }());
             exports_1("QueryResult", QueryResult);
-            InniusDatasource = (function () {
+            InniusDatasource = /** @class */ (function () {
                 function InniusDatasource(instanceSettings, $q, backendSrv, templateSrv) {
                     this.instanceSettings = instanceSettings;
                     this.$q = $q;
@@ -127,7 +127,7 @@ System.register([], function (exports_1, context_1) {
                         },
                         method: "POST"
                     }).then(function (x) { return x.data
-                        .map(function (s) { return { text: s.id, value: s.id }; })
+                        .map(function (s) { return { text: s.name, value: s.name }; })
                         .sort(function (a, b) {
                         return sort(a.value, b.value);
                     }); });

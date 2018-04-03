@@ -21,7 +21,7 @@ System.register(["app/plugins/sdk", "./css/query-editor.css!"], function (export
             }
         ],
         execute: function () {
-            InniusDatasourceQueryCtrl = (function (_super) {
+            InniusDatasourceQueryCtrl = /** @class */ (function (_super) {
                 __extends(InniusDatasourceQueryCtrl, _super);
                 function InniusDatasourceQueryCtrl($scope, $injector, uiSegmentSrv, $q) {
                     var _this = _super.call(this, $scope, $injector) || this;

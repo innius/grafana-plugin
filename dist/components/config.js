@@ -5,7 +5,7 @@ System.register([], function (exports_1, context_1) {
     return {
         setters: [],
         execute: function () {
-            InniusAppConfigCtrl = (function () {
+            InniusAppConfigCtrl = /** @class */ (function () {
                 function InniusAppConfigCtrl($scope, $injector, $q, backendSrv, alertSrv, contextSrv, datasourceSrv) {
                     this.$q = $q;
                     this.$q = $q;

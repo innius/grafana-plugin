@@ -14,19 +14,19 @@ System.register(["./datasource", "./query_ctrl"], function (exports_1, context_1
         execute: function () {
             exports_1("Datasource", datasource_1.InniusDatasource);
             exports_1("QueryCtrl", query_ctrl_1.InniusDatasourceQueryCtrl);
-            GraphiteQueryOptionsCtrl = (function () {
+            GraphiteQueryOptionsCtrl = /** @class */ (function () {
                 function GraphiteQueryOptionsCtrl() {
                 }
+                GraphiteQueryOptionsCtrl.templateUrl = "datasource/partials/query.options.html";
                 return GraphiteQueryOptionsCtrl;
             }());
-            GraphiteQueryOptionsCtrl.templateUrl = "datasource/partials/query.options.html";
             exports_1("QueryOptionsCtrl", GraphiteQueryOptionsCtrl);
-            AnnotationsQueryCtrl = (function () {
+            AnnotationsQueryCtrl = /** @class */ (function () {
                 function AnnotationsQueryCtrl() {
                 }
+                AnnotationsQueryCtrl.templateUrl = "datasource/partials/annotations.editor.html";
                 return AnnotationsQueryCtrl;
             }());
-            AnnotationsQueryCtrl.templateUrl = "datasource/partials/annotations.editor.html";
             exports_1("AnnotationsQueryCtrl", AnnotationsQueryCtrl);
         }
     };

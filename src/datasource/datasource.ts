@@ -20,7 +20,7 @@ class Machine {
 }
 
 class Sensor {
-    id: string
+    name: string
 }
 export class QueryResult {
     target: Target
@@ -137,7 +137,7 @@ export class InniusDatasource {
             },
             method: "POST"
         }).then(x => x.data
-            .map((s: Sensor) => { return { text: s.id, value: s.id } })
+            .map((s: Sensor) => { return { text: s.name, value: s.name } })
             .sort((a, b) => {
                 return sort(a.value, b.value)
             })

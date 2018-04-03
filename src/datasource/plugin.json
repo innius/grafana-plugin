@@ -18,8 +18,8 @@
     "links": [
       {"name": "Bitbucket", "url": "https://bitbucket.org/to-increase/dashboard-service"}      
     ],
-    "version": "0.0.1",
-    "updated": "2017-04-19"
+    "version": "1.0.1",
+    "updated": "2018-04-03"
   },
 
   "dependencies": {
